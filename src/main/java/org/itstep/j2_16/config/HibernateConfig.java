@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 public class HibernateConfig {
     private static StandardServiceRegistry registry;
     private static SessionFactory sessionFactory;
-@Bean
+@Bean(name = "sessionFactory")
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {

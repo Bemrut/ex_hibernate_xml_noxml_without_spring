@@ -18,7 +18,7 @@
         <property name="lastName" value="Kuzma1"/>
     </bean>
     <!--<context:property-placeholder location="classpath:/database.properties" />-->
-    <context:component-scan base-package="org.itstep.j2_16" />-->
+    <context:component-scan base-package="org.itstep.j2_16" />
 
 
     <!--<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">-->
