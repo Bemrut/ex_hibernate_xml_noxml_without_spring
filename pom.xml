@@ -17,8 +17,22 @@
         <common-lang3-version>3.0</common-lang3-version>
         <hsqldb.version>2.3.2</hsqldb.version>
         <junit-version>4.7</junit-version>
+        <spring-core>4.3.9.RELEASE</spring-core>
     </properties>
     <dependencies>
+        <!-- spring-core -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-core}</version>
+        </dependency>
+        <!-- spring-context -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-core}</version>
+        </dependency>
+
         <!-- Hibernate -->
         <dependency>
             <groupId>org.hibernate</groupId>

@@ -21,9 +21,12 @@ public class Student {
 
     // hibernate merge can't work without default constructor
     public Student() {
+        System.out.println("empty");
     }
 
     public Student(String firstName, String lastName) {
+        System.out.println("Constructor call");
+
         setFirstName(firstName);
         setLastName(lastName);
 

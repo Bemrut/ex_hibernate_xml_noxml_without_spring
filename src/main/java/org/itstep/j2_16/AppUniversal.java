@@ -11,6 +11,8 @@ import org.itstep.j2_16.entity.Student;
 import org.itstep.j2_16.service.StudentService;
 import org.itstep.j2_16.service.StudentServiceUniversal;
 import org.itstep.j2_16.util.HrDepartment;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import static java.lang.System.getProperty;
 import static org.apache.commons.lang3.StringUtils.isEmpty;
@@ -23,10 +25,14 @@ public class AppUniversal {
     public static void main(String[] args) {
         System.out.println("== START ==");
 
-        List<Student> studentsForSaving = Arrays.asList(
-                new Student("Oleh", "Pinta"),
-                new Student("Alex", "Kochetyga"),
-                new Student("Igor", "Demennikov"));
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationcontext.xml");
+
+       Student studentKuzma = (Student) context.getBean("studentMike");
+        Student studentSecond = (Student) context.getBean("studentSecond");
+        List<Student> studentsForSaving = Arrays.asList( studentSecond, studentKuzma );
+             //   new Student("Oleh", "Pinta"),
+             //   new Student("Alex", "Kochetyga"),
+
 
         // define hibernate config to use
         SessionFactory sessionFactory;
