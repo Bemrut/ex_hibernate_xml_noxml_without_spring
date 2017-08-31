@@ -60,7 +60,7 @@ public class Student {
 
     @Column(name = "full_name")
     public String getFullName() {
-        return "value from getter: " + fullName;
+        return fullName;
     }
 
     public void setFullName() {
