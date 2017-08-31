@@ -1,8 +1,5 @@
 # ex_hibernate_xml_without_spring
 
-
-
-
 ## Run the project
 #### Run class AppUniversal.java
 #### If property is_xml=true is passed then hibernate with xml based configuration will run <br> otherwise annotation based configuration will run
@@ -14,4 +11,22 @@
 
 `
     startDBManager();
+`
+
+#### To use with jetty plugin (8000 port is default)
+`
+
+ $ mvn jetty:run
+
+
+### to debug with embedded jetty:
+    
+    $ mvnDebug jetty:run
+    
+    then make config:
+    - Run -> Edit Configuration
+    - In Run/Debug Configuration window, you need to click on (+) button to add a new configuration
+    - Select Remote
+    - Keep the default configuration as is, just change the listening port to corresponding one (8000).
+    Run Degug config
 `

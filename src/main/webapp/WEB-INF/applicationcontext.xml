@@ -8,15 +8,7 @@
     http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 
 
-    <bean id="studentSecond" class="org.itstep.j2_16.entity.Student">
-        <constructor-arg name="firstName" value="Mike"/>
-        <constructor-arg name="lastName" value="Kuzma"/>
-    </bean>
-
-    <bean id="studentMike" class="org.itstep.j2_16.entity.Student">
-        <property name="firstName" value="Mike1"/>
-        <property name="lastName" value="Kuzma1"/>
-    </bean>
+    <!---->
     <!--<context:property-placeholder location="classpath:/database.properties" />-->
     <context:component-scan base-package="org.itstep.j2_16" />
 
